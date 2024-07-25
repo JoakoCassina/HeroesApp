@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "usuario": "John Doe",
       "email": "john.due@gmail.com"
     }
@@ -18,10 +18,11 @@
     {
       "id": "dc-superman",
       "superhero": "Superman",
-      "publisher": "DC Comics",
+      "publisher": "Marvel Comics",
       "alter_ego": "Kal-El",
       "first_appearance": "Action Comics #1",
-      "characters": "Kal-El"
+      "characters": "Kal-El",
+      "alt_img": "https://i.pinimg.com/474x/db/15/ba/db15bac66d1fb1794d53eaa90e5af7db.jpg"
     },
     {
       "id": "dc-flash",
@@ -166,6 +167,15 @@
       "alter_ego": "Norrin Radd",
       "first_appearance": "The Fantastic Four #48",
       "characters": "Norrin Radd"
+    },
+    {
+      "id": "",
+      "superhero": "Kick-Ass",
+      "publisher": "Marvel Comics",
+      "alter_ego": "Aaron Taylor Johnson",
+      "first_appearance": "Comics #1",
+      "characters": "Aaron Taylor Johnson",
+      "alt_img": "https://3.bp.blogspot.com/-aFfh1bfgvnc/WzDYaelOOFI/AAAAAAAApLo/F_AsSN8nUG4ctkAEdwxIniEUzhoaMK8hACEwYBhgL/s1600/KickAss-1.jpg"
     }
   ]
 }
