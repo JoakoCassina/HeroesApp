@@ -1,17 +1,18 @@
 <mat-sidenav-container fullscreen>
-
+<!--Estrucutra principal de nuestro apartado Héroes-->
   <mat-sidenav #sidenav mode="push" [ngStyle]="{width: '250px'}">
     <mat-toolbar>
       <span>Menú</span>
       <span class="spacer"></span>
 
-      <button mat-icon-button (click)="sidenav.toggle()">
+      <button mat-icon-button (click)="sidenav.toggle()"><!-- Boton que abre y cierra el navegador lateral de la pág-->
           <mat-icon>menu</mat-icon>
       </button>
 
     </mat-toolbar>
 
-    <mat-nav-list>
+    <mat-nav-list><!--lista de navegación con items(rutas) definidas por el componente, donde al clickear navega a dicha ruta
+      y cierra la navegador lateral -->
       <mat-list-item *ngFor="let item of sidebarItems" [routerLink]="item.url" (click)="sidenav.toggle()">
           <mat-icon matListItemIcon>{{ item.icon }}</mat-icon>
           {{ item.label }}

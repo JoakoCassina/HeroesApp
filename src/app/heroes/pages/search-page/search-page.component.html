@@ -1,22 +1,23 @@
 <div class="flex flex-column">
 
   <h3>Buscador</h3>
-
+  <!--Buscador con autocompletado para héroes usando Angular Material-->
   <mat-form-field>
 
     <mat-label>Buscador de héroes</mat-label>
     <input type="text" matInput [formControl]="searchInput" (input)="searchHero()" [matAutocomplete]="auto">
-
+    <!--[formContro] vincula el buscador con nusetro formulario reactivo, [matAutocomplete] vincula el buscador con el autocompletado definido-->
     <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete"
                       (optionSelected)="onSelectedOption( $event )">
-
+    <!--autoActiveFirstOption: activa la primera opcion de la lista de autocompletado, #auto: crea la referencia con el buscador-->
+    <!--(optionSelected) al seleccionar una opcion de la lista , llama al metodo onSelectedOption(se encarga de mostrar el héroe)-->
             <mat-option *ngFor="let hero of heroes" [value]="hero">
                 {{ hero.superhero }}
-            </mat-option>
+            </mat-option><!--Muestra el nombre de los héroes que coinciden con los terminos de busqueda-->
 
             <mat-option *ngIf="heroes.length === 0 && searchInput.value && searchInput.value.length > 0" value="">
                   No se encontro ningun super heroe con el término {{ searchInput.value }}
-            </mat-option>
+            </mat-option><!--Este msj solo se muestra si no encuientra héroes que coincidan con los criterios de busqueda-->
 
     </mat-autocomplete>
 

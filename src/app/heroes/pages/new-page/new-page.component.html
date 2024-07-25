@@ -1,7 +1,9 @@
+<!--Estructura donde vamos a tener el Formulario (para actualizar, crear o eliminar un héroe)-->
 <h1>{{ currentHero.id ? 'Editar' : 'Agregar' }} héroe
   <small *ngIf="currentHero.id">{{ currentHero.superhero }}</small>
 </h1>
-
+<!--Si me llega el id de un héroe (quiere decir que se va a editar o eliminar)-->
+<!--Si no me llega un ID quiere decir q vamos a estar creando un nuevo héroe-->
 <mat-divider class="mb-2"></mat-divider>
 
 <div class="grid">
@@ -9,10 +11,11 @@
     <mat-card>
       <mat-card-content>
         <form class="grid" [formGroup]="heroForm" (ngSubmit)="onSubmit()">
-
+          <!--[formGroup] vincula este formulario al heroForm(declarado en el componente), ngSumbit llama al metodo onSumbit cuando se envia el formulario-->
           <mat-form-field class="col-12 sm:col-6">
             <mat-label>Super héroe</mat-label>
             <input matInput type="text" required formControlName="superhero">
+            <!--formControlName: vincula este campo a un control de formulario (heroForm), required indica que el campo es obligatorio-->
           </mat-form-field>
 
           <mat-form-field class="col-12 sm:col-6">
@@ -32,8 +35,9 @@
 
           <mat-form-field class="col-12 ">
             <mat-label>Creador</mat-label>
-            <mat-select formControlName="publisher" required>
+            <mat-select formControlName="publisher" required><!--esta etiqueta representa un selector desplegable-->
               <mat-option *ngFor="let publisher of publishers" [value]="publisher.id">
+                <!--Crea las diferentes opciones dentro del selector, basada en los elementos que tiene publisher-->
                 {{ publisher.desc }}
               </mat-option>
             </mat-select>
@@ -48,12 +52,12 @@
 
         <div class="flex justify-content-between">
           <button mat-flat-button color="warn" *ngIf="currentHero.id" (click)="onDeleteHero()">
-            Borrar
+            Borrar<!--Si me llega un héroe (que me aparezca el botón), sino no-->
           </button>
 
           <button mat-flat-button color="primary" (click)="onSubmit()">
             <mat-icon>save</mat-icon>
-            Guardar
+            Guardar<!--al clickear gaurda el héroe (tanto como nuevo como actualizado)-->
           </button>
         </div>
 
@@ -65,7 +69,7 @@
 
     <mat-card>
       <img [src]="currentHero | heroImage" alt="Imagen del Héroe" mat-card-image>
-    </mat-card>
+    </mat-card><!--Mostramos la imagen del héroe si la tiene, sino le asignamos la que tenemos por defecto-->
 
   </div>
 </div>

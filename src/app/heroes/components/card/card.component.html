@@ -1,15 +1,16 @@
-<mat-card>
+<mat-card> <!--Utilizamos Angular Material para la estructura de nuestros HTML-->
   <mat-card-header>
-    <mat-card-title>{{ hero.superhero }}</mat-card-title>
-    <mat-card-subtitle>{{ hero.alter_ego }}</mat-card-subtitle>
+    <mat-card-title>{{ hero.superhero }}</mat-card-title> <!-- Trae el nombre del héroe que llega al componente-->
+    <mat-card-subtitle>{{ hero.alter_ego }}</mat-card-subtitle><!-- Trae el nombre de la persona detras del Traje-->
   </mat-card-header>
 
   <img mat-card-image [src]="hero | heroImage" [alt]="hero.superhero">
+  <!-- Recibimos un Héroe y le pasamos un Pipe (que le asigna la imagen correspondiente a tal)-->
 
   <mat-card-content class="mt-2">
-    <h4>{{ hero.publisher }}</h4>
+    <h4>{{ hero.publisher }}</h4> <!-- Devuelve a que creador pertenece el héroe (DC/Marvel)-->
     <p>
-      <strong>Primera aparicion</strong> {{ hero.first_appearance }}
+      <strong>Primera aparicion</strong> {{ hero.first_appearance }} <!--Devuelve la descripcin de la primera aparición del héroe-->
       <br>
       <mat-chip-listbox>
         <mat-chip *ngFor="let name of hero.characters.split(',') | slice:0:3">
@@ -21,14 +22,14 @@
 
   <mat-card-actions>
     <button mat-button mat-raised color="primary" [routerLink]="['/heroes/edit', hero.id ]">
-      <mat-icon>edit</mat-icon>
+      <mat-icon>edit</mat-icon> <!--Al clickear editar nos lleva a la ruta (donde encontraremos el formulario de Edicion)-->
       Editar
     </button>
 
-    <span class="spacer"></span>
+    <span class="spacer"></span><!--la clase spacer es de Angular material y la utilizamos como separador de los botones-->
 
     <button mat-button mat-raised [routerLink]="['/heroes', hero.id ]">
-      <mat-icon>more_horiz</mat-icon>
+      <mat-icon>more_horiz</mat-icon><!-- Al clickear nos lleva a la pág donde veremos la info completa del héroe-->
       Más
     </button>
   </mat-card-actions>

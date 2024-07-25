@@ -16,7 +16,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
-@NgModule({
+@NgModule({//Modulos que reutilizamos para estructurar nuestro proyecto
   exports: [
     MatAutocompleteModule,
     MatButtonModule,

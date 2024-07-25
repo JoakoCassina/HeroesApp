@@ -5,7 +5,7 @@
     </mat-grid-tile>
   </mat-grid-list>
 </ng-template>
-
+<!--Página que muestra la información completa del héroe-->
 <div *ngIf="hero; else divLoading" class="grid p2">
 
 
@@ -37,6 +37,7 @@
       </mat-list>
 
       <button mat-button color="warn" (click)="goBack()">Regresar</button>
+      <!--con el go back regresamos a la pagina anterior (en este caso el listado)-->
 
     </mat-card-content>
   </mat-card>

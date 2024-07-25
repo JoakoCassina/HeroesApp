@@ -16,7 +16,7 @@ import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dial
 
 
 @NgModule({
-  declarations: [
+  declarations: [//Declaramos los componentes que utilizamos y nuestro Pipe Personalizado que maneja las IMG
     CardComponent,
     ConfirmDialogComponent,
     HeroPageComponent,
@@ -30,9 +30,9 @@ import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dial
   ],
   imports: [
     CommonModule,
-    HeroesRoutingModule,
-    MaterialModule,
-    ReactiveFormsModule,
+    HeroesRoutingModule,//Modulo que maneja las rutas de los componentes
+    MaterialModule,//Modulo que maneja la estructuras y etiquetas de nuestro HTML provenientes de (Angular Material)
+    ReactiveFormsModule,//Modulo que maneja nuestros formularios reactivos
   ]
 })
 export class HeroesModule { }

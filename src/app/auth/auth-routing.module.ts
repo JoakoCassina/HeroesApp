@@ -8,11 +8,11 @@ import { RegisterPageComponent } from './pages/register-page/register-page.compo
 const routes: Routes = [
   {
     path: '',
-    component: LayoutPageComponent,
-    children: [
-      { path:'login', component: LoginPageComponent },
-      { path:'new-account', component: RegisterPageComponent },
-      { path: '**', redirectTo: 'login' }
+    component: LayoutPageComponent, //Formato de pagina principal
+    children: [//Paginas hijas que mantiene la estructura de la pág principal
+      { path:'login', component: LoginPageComponent }, //logear usuario
+      { path:'new-account', component: RegisterPageComponent }, // crear usuario
+      { path: '**', redirectTo: 'login' } //En caso de agregar una ruta diferente redireccionar al Login
     ]
   }
 ];

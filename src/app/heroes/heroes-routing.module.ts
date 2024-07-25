@@ -10,8 +10,8 @@ import { HeroPageComponent } from './pages/hero-page/hero-page.component';
 const routes: Routes = [
   {
     path: '',
-    component: LayoutPageComponent,
-    children: [
+    component: LayoutPageComponent,//Componente principal que va a manejar la estructura
+    children: [//Rutas y componentes hijos que van a mantener la estructura de su componente principal
       { path: 'new-hero', component: NewPageComponent},
       { path: 'search', component: SearchPageComponent},
       { path: 'edit/:id', component: NewPageComponent},

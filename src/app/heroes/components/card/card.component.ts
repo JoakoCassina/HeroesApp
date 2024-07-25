@@ -9,9 +9,9 @@ import { Hero } from '../../interfaces/hero.interface';
 export class CardComponent implements OnInit {
 
   @Input()
-  public hero!: Hero;
+  public hero!: Hero; //Esperamos recibir un Object HERO del componente padre.
 
   ngOnInit(): void {
-      if ( !this.hero ) throw Error('Hero property is required')
+      if ( !this.hero ) throw Error('La propiedad Héroe es requerida')
   }
 }
