@@ -3,7 +3,7 @@
     {
       "id": "1",
       "usuario": "John Doe",
-      "email": "john.due@gmail.com"
+      "email": "john.doe@gmail.com"
     }
   ],
   "heroes": [
@@ -51,10 +51,11 @@
     {
       "id": "dc-wonder",
       "superhero": "Wonder Woman",
-      "publisher": "DC Comics",
+      "publisher": "Marvel Comics",
       "alter_ego": "Princess Diana",
       "first_appearance": "All Star Comics #8",
-      "characters": "Princess Diana"
+      "characters": "Princess Diana",
+      "alt_img": "https://4.bp.blogspot.com/-e4F4TOOkPqc/Ut_8EEoYEPI/AAAAAAAAEzE/3jaPdmcAK8s/s1600/Wonder_Woman_New_52_Jim_Lee.jpg"
     },
     {
       "id": "dc-martian",
