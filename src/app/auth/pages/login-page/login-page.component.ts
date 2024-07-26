@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'auth-login-page',
@@ -6,5 +8,18 @@ import { Component } from '@angular/core';
   styles: []
 })
 export class LoginPageComponent {
+
+  constructor
+    ( private authService: AuthService,
+      private router: Router
+     ) {}
+
+  onLogin(): void {
+    this.authService.login('', '')//Llamamos al metodo del servis pasandole 2 string, caso real serian (un meil y una passw)
+      .subscribe( user => {
+        this.router.navigate(['/']);//Una vez logeado te redirige al apartado héroes
+      });
+
+  }
 
 }

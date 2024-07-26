@@ -27,8 +27,9 @@
     </button>
 
     <span class="spacer"></span>
+    <span>{{ user?.email }}</span>
 
-    <button mat-button>
+    <button mat-button (click)="onLogout()"><!--al cerrar sessión llamamos al metodo(que elimina los datos del usuario) -->
       Logout
     </button>
   </mat-toolbar>
